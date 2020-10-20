@@ -1,0 +1,37 @@
+
+@font-face{
+    font-family: 'Yekan';
+    src: url(../Yekan/Yekan/Yekan.eot),url(../Yekan/Yekan/Yekan.ttf),url(../Yekan/Yekan/Yekan.woff);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+body{
+    font-family: 'Yekan';
+    font-weight:400;
+    line-height: 1.7;
+    color: $color-lighte-gray;
+    padding: 3rem;
+}
+
+.heading-primery{
+    color: $color-white;
+    backface-visibility: hidden;
+    text-shadow: .5rem 1rem 3.5rem $color-gray-shadow;
+    &--main{
+        display: block;
+        font-size: 10rem;
+        font-weight: 300;
+        line-height: 1.5;
+        animation: moveInLeft 2s ease;
+    }
+    
+    &--sub{
+        display: block;
+        font-size: 4rem;
+        font-weight: 200;
+        margin-bottom: 5rem;
+        animation: moveInRight 2s ease;
+    }
+}
