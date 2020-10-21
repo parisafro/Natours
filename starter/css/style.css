@@ -44,13 +44,14 @@ body {
   font-family: 'Yekan';
   font-weight: 400;
   line-height: 1.7;
-  color: #b8b8b8;
-  padding: 3rem; }
+  color: #333333;
+  padding: 3rem;
+  direction: rtl; }
 
 .heading-primery {
   color: #fff;
   backface-visibility: hidden;
-  text-shadow: 0.5rem 1rem 3.5rem #494949; }
+  text-shadow: 0.5rem 0.5rem 3.5rem rgba(73, 73, 73, 0.1); }
   .heading-primery--main {
     display: block;
     font-size: 10rem;
@@ -63,6 +64,38 @@ body {
     font-weight: 200;
     margin-bottom: 5rem;
     animation: moveInRight 2s ease; }
+
+.heading--secondary {
+  font-size: 4.5rem;
+  font-weight: 600;
+  display: inline-block;
+  background-image: linear-gradient(to left, #28b485, #01adcbcc);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .2s; }
+  .heading--secondary:hover {
+    transform: scale(1.1);
+    text-shadow: 0.1rem 0.1rem 4rem rgba(73, 73, 73, 0.2); }
+
+.heading-tertiary {
+  font-size: 2.5rem;
+  font-weight: 550; }
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #4b4b4b; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1.5rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -86,7 +119,7 @@ body {
   background-color: #fff;
   color: #4b4b4b; }
   .btn--white::after {
-    background-color: whitesmoke; }
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -99,21 +132,80 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
-  .btn::after::after {
-    transform: scalex(1.4) scaleY(1.6);
-    opacity: 0; }
 
 .btn--animated {
   transition: all .4s ease-in .75s;
   animation-fill-mode: backwards; }
 
+.button-next {
+  font-size: 2rem; }
+  .button-next:link, .button-next:visited {
+    color: #55c57a;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #55c57a;
+    padding: 3px;
+    transition: all .2s; }
+  .button-next:hover {
+    background-color: #55c57a;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(48, 48, 48, 0.15);
+    transform: translateY(-2px); }
+  .button-next:active {
+    box-shadow: 0 0.5rem 1rem rgba(48, 48, 48, 0.15);
+    transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(73, 73, 73, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all .2;
+    outline-offset: 1.5rem; }
+    .composition__photo--p1 {
+      right: 10%;
+      top: 3rem; }
+    .composition__photo--p2 {
+      left: 0;
+      top: 8rem; }
+    .composition__photo--p3 {
+      right: 20%;
+      top: 20rem; }
+    .composition__photo:hover {
+      outline: 0.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(73, 73, 73, 0.5);
+      z-index: 20; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.8);
+    z-index: 9; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^=col-] {
+    float: right; }
+    .row [class^=col-]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-2 {
+    width: calc((100% - 6rem) / 2); }
+
 .header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(rgba(126, 213, 111, 0.8), rgba(1, 173, 203, 0.8)), url(../img/hero.jpg);
-  background-position: center;
+  background-image: linear-gradient(rgba(126, 213, 111, 0.6), rgba(1, 173, 203, 0.6)), url(../img/hero.jpg);
+  background-position: top;
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -126,3 +218,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #dddddd;
+  padding: 25rem 0;
+  margin-top: -15vh; }
