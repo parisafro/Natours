@@ -69,7 +69,7 @@ body {
   font-size: 4.5rem;
   font-weight: 600;
   display: inline-block;
-  background-image: linear-gradient(to left, #28b485, #01adcbcc);
+  background-image: linear-gradient(to left, #28b485, #01adcb);
   -webkit-background-clip: text;
   color: transparent;
   transition: all .2s; }
@@ -100,22 +100,28 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-bottom: 10rem; }
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
   padding: 1.5rem 8rem;
   font-size: 2rem;
+  display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
   position: relative;
-  animation: moveInBottom 2s; }
+  transition: all .3s; }
 
 .btn:hover {
-  transform: translateY(-0.3rem);
+  transform: translateY(-3rem);
   box-shadow: 0rem 1rem 2rem #30303080; }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
-  transform: translateY(0.1rem);
+  transform: translateY(-1px);
   box-shadow: 0px 0.5rem 1rem #30303080; }
 
 .btn--white {
@@ -123,6 +129,12 @@ body {
   color: #4b4b4b; }
   .btn--white::after {
     background-color: #fff; }
+
+.btn--green {
+  background-color: #7ed56f;
+  color: #4b4b4b; }
+  .btn--green::after {
+    background-color: #7ed56f; }
 
 .btn::after {
   content: "";
@@ -134,10 +146,10 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s; }
+  transition: all .8s; }
 
 .btn--animated {
-  transition: all .4s ease-in .75s;
+  transition: moveInbottom .4s ease-in .75s;
   animation-fill-mode: backwards; }
 
 .button-next {
@@ -161,35 +173,99 @@ body {
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
-  height: 50rem;
-  color: peachpuff;
+  height: 52rem;
   position: relative; }
   .card__side {
-    height: 50rem;
-    transition: all .7s ease-in;
-    font-size: 2rem;
+    height: 52rem;
+    transition: all .8s ease-in;
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 3.5rem rgba(73, 73, 73, 0.8); }
+    box-shadow: 0 1.5rem 2rem -0.5rem rgba(73, 73, 73, 0.9); }
     .card__side--front {
-      background-color: #fff;
-      transform: rotateY(180deg); }
+      background-color: #fff; }
     .card__side--back {
-      background-color: green; }
+      transform: rotateY(-180deg); }
       .card__side--back-1 {
-        background-image: linear-gradient(to right bottom, #20deffcc, #027d93cc); }
+        background-image: linear-gradient(to right bottom, #1fddff, #027c92); }
       .card__side--back-2 {
         background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #ffcf4a, #ffa600); }
   .card:hover .card__side--front {
-    transform: rotateY(0); }
-  .card:hover .card__side--back {
     transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #1fddff, #027c92), url(/img/nat-5.jpg); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(/img/nat-6.jpg); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #ffcf4a, #ffa600), url(/img/nat-7.jpg); }
+  .card__heading {
+    direction: rtl;
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 10rem;
+    right: 2rem;
+    width: 75%; }
+  .card__heading--span {
+    padding: .6rem 1.5rem;
+    -webkit-box-direction-break: clone;
+    box-decoration-break: clone; }
+    .card__heading--span-1 {
+      background-image: linear-gradient(to right bottom, #1fddff, #027c92); }
+    .card__heading--span-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+    .card__heading--span-3 {
+      background-image: linear-gradient(to right bottom, #ffcf4a, #ffa600); }
+  .card__details {
+    padding: 0 3rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details ul i.far,
+      .card__details ul i.fas,
+      .card__details ul i.fab {
+        font-size: 1.6rem;
+        padding: 0 1rem; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 1.1rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #333333; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center; }
+  .card__price-box {
+    color: #fff;
+    margin: 8rem; }
+  .card__price--only {
+    font-size: 5rem;
+    padding: 2rem; }
+  .card__price--value {
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-bottom: 10rem; }
 
 .composition {
   position: relative; }
@@ -231,7 +307,7 @@ body {
     font-size: 6rem;
     margin-bottom: .5rem;
     display: inline-block;
-    background-image: linear-gradient(to bottom, #55c57a, #01adcbcc);
+    background-image: linear-gradient(to bottom, #55c57a, #01adcb);
     -webkit-background-clip: text;
     color: transparent; }
   .feature-box:hover {
@@ -297,5 +373,5 @@ body {
 
 .section-tours {
   background-color: #dddddd;
-  padding: 25rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
