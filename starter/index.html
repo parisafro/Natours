@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,25 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
-    <body>
+    <body>  
+        <!--navigation section start-->      
+        <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">ورود | ثبت نام</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">پیگیری خرید</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"> راهنمای خرید بلیت</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">راهنمای استرداد بلیت</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">تماس با ما</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!--navigation section end-->
         <!--header section start-->
         <header class="header">
             <div class="header__logo-box">
@@ -20,7 +38,7 @@
                     <span class="heading-primery--main">سفـــر به خیـــر</span>
                     <span class="heading-primery--sub">انتخاب هوشمند سفر  </span>
                 </div>
-                <a href="#" class="btn btn--white btn--animated">
+                <a href="#section-tours" class="btn btn--white btn--animated">
                     تورهای ویژه
                 </a>
             </div>
@@ -35,7 +53,7 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-1-2">
+                    <div class="col-1-of-2">
                         <h3 class="heading-tertiary u-margin-bottom-small">
                             در کنار ما از سفر لذت ببرید
                         </h3>
@@ -50,7 +68,7 @@
                         </p>
                         <a href="#" class="button-next" >ادامه مطلب    &larr;</a>
                     </div>
-                    <div class="col-1-2">
+                    <div class="col-1-of-2">
                         <div class="composition">
                             <img src="img/nat-1-large.jpg" alt="photo one" class="composition__photo composition__photo--p1">
                             <img src="img/nat-2-large.jpg" alt="photo two" class="composition__photo composition__photo--p2">
@@ -103,7 +121,7 @@
             </section>
             <!--feachers section end-->
             <!--tour section start-->
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading--secondary">
                         پرفروشترین هتل‌های خارجی
@@ -141,7 +159,7 @@
                                             14,675,000ریال  
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         رزرو میکنم
                                     </a>
                                 </div>
@@ -179,7 +197,7 @@
                                             14,675,000ریال  
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         رزرو میکنم
                                     </a>
                                 </div>
@@ -217,7 +235,7 @@
                                             50,675,000ریال  
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         رزرو میکنم
                                     </a>
                                 </div>
@@ -352,15 +370,34 @@
                     </div>
                     <div class="col-1-of-2">
                         <p class="footer__copyright">
-                            Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
-                            Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal
-                            and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas
-                            Schmedtmann, is of course highly appreciated!
+                            شما با خرید بلیط هواپیما از سفر به خیر با سامانه مطمئن و معتبری روبه‌رو هستید که تمام نیازهایتان را پاسخ می‌دهد. برای خرید آنلاین بلیط هواپیما در سفر به خیر کافیست مبدا، مقصد و تاریخ پرواز خود را انتخاب کنید. پس از کلیک روی جستجو، لیست قیمت بلیط هواپیما به مقصد مورد نظر شما ظاهر می‌شود. در این لیست، انتخابهای متعددی پیش روی شماست. برای اینکه گزینه‌ ها را برای خرید بلیط هواپیما محدودتر کنید، سفر به خیر ابزارهای مختلفی در اختیار شما می‌گذارد.
+                            <span class="footer__copyright--span">تمامی حقوق معنوی و مادی محفوظ است.<a href="#" class="footer__link"></a> &copy;</span>
                         </p>
                     </div>
                 </div>
             </footer>
             <!--footer section end-->
+            <!--popup section start-->
+            <div class="popup" id="popup">
+                <div class="popup__content">
+                    <div class="popup__left">
+                        <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                        <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                    </div>
+                    <div class="popup__right">
+                        <a href="#section-tours" class="popup__close">&times;</a>
+                        <h2 class="heading-secondary u-margin-bottom-small">راهنمای خرید بلیط هواپیما </h2>
+                        <h3 class="heading-tertiary u-margin-bottom-small">مهم &ndash; راهنمای خرید بلیط هواپیما داخلی</h3>
+                        <p class="popup__text">
+                            برای خرید بلیط هواپیما از سفر به خیر، گزینه‎‌ی « پروازهای داخلی » را انتخاب کنید. همچنین باید مشخص کنید که بلیط یک‌طرفه می‌خواهید یا دوطرفه. برای کامل بودن توضیحات، در این راهنما مراحل خرید پرواز دوطرفه بررسی می‌شود.
+                             بعد از انتخاب نوع بلیط، لازم است مبدا، مقصد، تاریخ رفت، تاریخ برگشت و تعداد مسافران را وارد کنید و بر روی گزینه‌ی جستجو کلیک کنید.
+
+                        </p>
+                        <a href="#" class="btn btn--green">Book now</a>
+                    </div>
+                </div>
+            </div>
+            <!--popup section end-->
         </main>
     </body>
 

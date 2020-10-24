@@ -14,7 +14,7 @@
             margin-left: $horizontal-gutter;
         }
     }
-    .col-1-2{
+    .col-1-of-2{
         width: calc((100% - #{$horizontal-gutter}) / 2);
         
     }

@@ -71,6 +71,13 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+    &--span{
+        display:block;
+        margin: 0 auto;
+        top:2rem;
+        left: 5rem;
+        transform: translate(150px, 70px);
+    }
 
         // @include respond(tab-port) {
         //     width: 100%;
