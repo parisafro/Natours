@@ -6,7 +6,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 body{
     font-family: 'Yekan';
     font-weight:400;
@@ -28,6 +27,10 @@ body{
         font-weight: 300;
         line-height: 1.5;
         animation: moveInLeft 2s ease;
+
+        @include respond(phone) {
+            font-family: 5rem;
+        }
     }
     
     &--sub{
@@ -47,6 +50,15 @@ body{
     -webkit-background-clip: text;
     color: transparent;
     transition: all .2s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
+
     &:hover{
         transform: scale(1.1);
         text-shadow: .1rem .1rem 4rem rgba($color-gray-shadow,.2);

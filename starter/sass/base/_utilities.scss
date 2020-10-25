@@ -8,16 +8,26 @@
 }
 .u-margin-bottom-medium{
     margin-bottom: 3rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;
+    }
 }
 .u-margin-bottom-big{
     margin-bottom: 8rem !important;
 }
 .u-margin-top-big{
     margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 2rem !important;
+    }
 }
 
 .u-margin-top-huge{
     margin-bottom: 10rem !important;
 }
+
+
 
 
