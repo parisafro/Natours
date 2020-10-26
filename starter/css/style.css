@@ -609,7 +609,7 @@ body {
       .story__shape {
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
-        -webkit-shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(60% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: none; } }
     @media only screen and (max-width: 37.5em) {
